@@ -87,6 +87,15 @@
 /* German @ */
 #define GER_AT (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))
 
+/* German / */
+#define GER_SLASH (AMPERSAND)
+
+/* German * (star) */
+#define GER_STAR (RBRC)
+
+/* German \ */
+#define GER_BSLH (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))
+
 // Backtick (`) dead key
 #define GER_BACKTICK (GT)
 /*ZMK_BEHAVIOR(GER_BACKTICK, macro,
