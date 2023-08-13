@@ -78,6 +78,32 @@
 /* German ? */
 #define GER_QUESTION (UNDERSCORE) 
 
+/* German ~ */
+#define GER_TILDE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
+
+/* German $ */
+#define GER_DOLLAR (DOLLAR) 
+
+/* German @ */
+#define GER_AT (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))
+
+// Backtick (`) dead key
+#define GER_BACKTICK (GT)
+/*ZMK_BEHAVIOR(GER_BACKTICK, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp PLUS &kp SPACE>;
+)*/
+
+// Caret (^) dead key
+#define GER_CARET (GT)
+/*ZMK_BEHAVIOR(GER_CARET, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp GRAVE &kp SPACE>;
+)*/
+
+
 / {
     behaviors {
       #include "macros.dtsi"
@@ -110,8 +136,8 @@
         &kp F1    &kp F2          &kp F3        &kp F4       &kp F5        &kp F6        &tog 1                                                              &mo 3  &kp F7        &kp F8         &kp F9          &kp F10       &kp F11          &kp F12
         &trans    &kp GER_SQT     &kp GER_LT    &kp GER_GT   &kp GER_DQT   &kp GER_PARA  &none                                                               &none  &kp GER_EURO  &kp GER_AMPS   &kp GER_LBKT    &kp GER_RBKT  &kp GER_PERCENT  &trans
         &trans    &kp EXCLAMATION &kp GER_MINUS &kp GER_PLUS &kp GER_EQUAL &kp GER_HASH  &none        &kp LCTRL &kp DEL  &kp LGUI  &kp RCTRL                 &none  &kp GER_PIPE  &kp GER_COLON  &kp GER_LPAR    &kp GER_RPAR  &kp GER_QUESTION &trans
-        &trans    &kp Z           &kp X         &kp C        &kp V         &kp B                                &kp LALT &kp RALT                                   &kp N         &kp KP_N1      &kp KP_N2       &kp KP_N3     &kp KP_ENTER     &trans
-        &trans    &kp GRAVE       &kp CAPS      &kp LEFT     &kp RIGHT                       &kp SPACE &trans   &kp BSPC  &trans &kp RSHFT &kp RETURN                             &kp UP         &kp DOWN        &kp KP_DOT    &kp RBKT         &trans
+        &trans    &kp GER_CARET   &kp GER_SLASH &kp GER_STAR &kp GER_BSLH  &GER_BACKTICK                        &kp LALT &kp RALT                                   &kp GER_TILDE &kp GER_DOLLAR &kp GER_LBRC    &kp GER_RBRC  &kp GER_AT       &trans
+        &trans    &trans          &trans        &trans       &trans                          &kp SPACE &trans   &kp BSPC  &trans &kp RSHFT &kp RETURN                             &trans         &trans          &trans        &trans           &trans
       >;
     };
     fn {
