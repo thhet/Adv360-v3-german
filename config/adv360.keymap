@@ -105,17 +105,24 @@
 )*/
 
 // Caret (^) dead key
-#define GER_CARET (GT)
+// #define GER_CARET (GT)
 /*ZMK_BEHAVIOR(GER_CARET, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp GRAVE &kp SPACE>;
 )*/
 
-
 / {
     behaviors {
       #include "macros.dtsi"
+
+      GER_CARET: GER_CARET {
+        label = "GER_CARET";
+        compatible = "zmk,behavior-macro";
+        wait-ms = <100>;
+        tap-ms = <5>;
+        bindings = <&kp GRAVE &kp SPACE>;
+      };
 
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
