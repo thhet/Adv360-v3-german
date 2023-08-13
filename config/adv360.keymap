@@ -118,6 +118,7 @@
 
       GER_CARET: GER_CARET {
         label = "GER_CARET";
+        #binding-cells = <0>;
         compatible = "zmk,behavior-macro";
         wait-ms = <100>;
         tap-ms = <5>;
