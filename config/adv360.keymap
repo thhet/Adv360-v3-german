@@ -75,6 +75,9 @@
 // German + */
 #define GER_PLUS (RBKT)
 
+// German + */
+#define GER_CTRL_PLUS (LC(RBKT))
+
 /* German = */
 #define GER_EQUAL (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))
 
@@ -148,11 +151,11 @@
 
     default_layer {
       bindings = <
-        &kp ESC   &kp N1       &kp N2      &kp N3       &kp N4         &kp N5 &tog 1                                                            &mo 3 &kp N6 &kp N7        &kp N8          &kp N9          &kp N0       &kp GER_SZ
-        &kp TAB   &kp Q        &kp W       &kp E        &kp R          &kp T  &none                                                             &none &kp Y  &kp U         &kp I           &kp O           &kp P        &kp GER_UU
-        &kp CAPS  &kp A        &kp S       &kp D        &kp F          &kp G  &none           &kp LCTRL &kp DEL  &kp LGUI   &kp RCTRL           &none &kp H  &kp J         &kp K           &kp L           &kp GER_UO   &kp GER_UA
-        &kp LSHFT &kp Z        &kp X       &kp C        &kp V          &kp B                            &kp LALT &kp RALT                             &kp N  &kp M         &kp COMMA       &kp DOT         &kp FSLH     &kp RSHFT
-        &kp LCTRL &kp GER_UNDO &kp GER_CUT &kp GER_COPY &kp GER_PASTE         &kp RSHFT &mo 1 &mo 2     &kp BSPC &kp RETURN &kp SPACE                        &kp DESK_LEFT &kp DESK_RIGHT  &kp PRINTSCREEN &kp GER_REDO &kp RCTRL
+        &kp ESC   &kp N1       &kp N2      &kp N3       &kp N4         &kp N5 &tog 1                                                            &mo 3 &kp N6 &kp N7        &kp N8          &kp N9            &kp N0       &kp GER_SZ
+        &kp TAB   &kp Q        &kp W       &kp E        &kp R          &kp T  &none                                                             &none &kp Y  &kp U         &kp I           &kp O             &kp P        &kp GER_UU
+        &kp CAPS  &kp A        &kp S       &kp D        &kp F          &kp G  &none           &kp LCTRL &kp DEL  &kp LGUI   &kp RCTRL           &none &kp H  &kp J         &kp K           &kp L             &kp GER_UO   &kp GER_UA
+        &kp LSHFT &kp Z        &kp X       &kp C        &kp V          &kp B                            &kp LALT &kp RALT                             &kp N  &kp M         &kp COMMA       &kp DOT           &kp FSLH     &kp RSHFT
+        &kp LCTRL &kp GER_UNDO &kp GER_CUT &kp GER_COPY &kp GER_PASTE         &kp RSHFT &mo 1 &mo 2     &kp BSPC &kp RETURN &kp SPACE                        &kp DESK_LEFT &kp DESK_RIGHT  &kp GER_CTRL_PLUS &kp GER_REDO &kp RCTRL
       >;
     };
     symbol_layer {
@@ -166,11 +169,11 @@
     };
     fn {
       bindings = <
-        &kp F1 &kp F2        &kp F3   &kp F4    &kp F5         &kp F6 &tog 1                                                     &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans &trans        &kp HOME &kp UP    &kp END        &trans  &none                                                     &none &trans &trans &trans &trans  &trans  &trans
-        &trans &kp WORD_LEFT &kp LEFT &kp RIGHT &kp WORD_RIGHT &trans  &none       &kp LCTRL  &kp DEL  &kp LGUI &kp RCTRL        &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans        &trans   &kp DOWN  &trans         &trans                         &kp LALT &kp RALT                        &trans &trans &trans &trans  &trans  &trans
-        &trans &trans        &trans   &trans    &trans                       &kp RSHFT &trans &trans   &kp BSPC &kp RETURN &kp N0             &trans &trans &trans  &trans  &trans
+        &kp F1 &kp F2        &kp F3   &kp F4    &kp F5         &kp F6 &tog 1                                                     &mo 3 &kp F7        &kp F8   &kp F9 &kp F10        &kp F11         &kp F12
+        &trans &trans        &kp HOME &kp UP    &kp END        &trans  &none                                                     &none &kp HOME      &trans   &trans &kp END        &kp PRINTSCREEN &trans
+        &trans &kp WORD_LEFT &kp LEFT &kp RIGHT &kp WORD_RIGHT &trans  &none       &kp LCTRL  &kp DEL  &kp LGUI &kp RCTRL        &none &kp LEFT      &kp DOWN &kp UP &kp RIGHT      &trans          &trans
+        &trans &trans        &trans   &kp DOWN  &trans         &trans                         &kp LALT &kp RALT                        &kp WORD_LEFT &trans   &trans &kp WORD_RIGHT &trans          &trans
+        &trans &trans        &trans   &trans    &trans                       &kp RSHFT &trans &trans   &kp BSPC &kp RETURN &kp N0                    &trans   &trans &trans         &trans          &trans
       >;
     };
     mod {
